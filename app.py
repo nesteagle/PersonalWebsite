@@ -11,6 +11,21 @@ def index():
    print('Request for index page received')
    return render_template('index.html')
 
+@app.route('/general')
+def project():
+   print('Request for project page received')
+   return render_template('projects/general.html')
+
+@app.route('/games')
+def games():
+   print('Request for games page received')
+   return render_template('projects/games.html')
+
+@app.route('/web')
+def web():
+   print('Request for web page received')
+   return render_template('projects/web.html')
+
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
