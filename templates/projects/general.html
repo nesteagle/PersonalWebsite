@@ -1,68 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects</title>
+{% block main_content %}
+<main class="container mt-5 pt-5">
+    <div class="text-center mb-5" data-aos="fade-down">
+        <h1 class="display-4 fw-bold">General Projects</h1>
+        <p class="lead text-muted">A collection of general projects</p>
+    </div>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="../static/bootstrap/css/style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-surface fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">nesteagle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown" role="button"
-                            data-bs-toggle="dropdown">
-                            Projects
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item active" href="#">General Projects TODO:rename</a></li>  <!--TODO: review if this is needed for UI-->
-                            <li><a class="dropdown-item" href="/games">Games</a></li>
-                            <li><a class="dropdown-item" href="/web">Web Projects</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container mt-5 pt-5">
-        <div class="text-center mb-5" data-aos="fade-down">
-            <h1 class="display-4 fw-bold">General Projects TODO:rename</h1>
-            <p class="lead text-muted">A collection of general projects</p>
-        </div>
-
-        <div class="row g-4">
-            <!-- Project 1 -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
-                <div class="card bg-surface text-light shadow h-100">
-                    <img src="/images/games/game1.png" class="card-img-top" alt="Project1">
-                    <div class="card-body">
-                        <h5 class="card-title">CPSC210 Term Project</h5>
-                        <p class="card-text text-muted">A semester-long term project created in CPSC 210 at UBC.</p>
-                        <a href="#" class="btn btn-outline-primary">View Details</a>
-                    </div>
+    <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
+            <div class="card bg-surface text-light shadow h-100">
+                <img src="/images/games/game1.png" class="card-img-top" alt="Project1">
+                <div class="card-body">
+                    <h5 class="card-title">CPSC210 Term Project</h5>
+                    <p class="card-text text-muted">A semester-long term project created in CPSC 210 at UBC.</p>
+                    <a href="#" class="btn btn-outline-primary">View Details</a>
                 </div>
             </div>
         </div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-</body>
-
-</html>
+    </div>
+</main>
+{%endblock%}

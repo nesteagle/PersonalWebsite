@@ -1,94 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Game Projects</title>
+{% block main_content %}
+<main class="container mt-5 pt-5">
+    <div class="text-center mb-5" data-aos="fade-down">
+        <h1 class="display-4 fw-bold">Games</h1>
+        <p class="lead text-primary d-inline">
+            A collection of game projects including ones published on
+            <a href="https://nesteagle.itch.io/" class="nav-link d-inline p-0">Itch.io</a>
+        </p>
+    </div>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="../../static/bootstrap/css/style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-surface fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">nesteagle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown" role="button"
-                            data-bs-toggle="dropdown">
-                            Projects
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="/general">General Projects TODO:rename</a></li>
-                            <li><a class="dropdown-item active" href="#">Games</a></li>
-                            <!--TODO: review if this is needed for UI-->
-                            <li><a class="dropdown-item" href="/web">Web Projects</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container mt-5 pt-5">
-        <div class="text-center mb-5" data-aos="fade-down">
-            <h1 class="display-4 fw-bold">Games</h1>
-            <p class="lead text-primary d-inline">
-                A collection of game projects including ones published on
-                <a href="https://nesteagle.itch.io/" class="nav-link d-inline p-0">Itch.io</a>
-            </p>
-        </div>
-
-        <div class="row g-4">
-            <!-- Game 1 -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
-                <div class="card bg-surface text-light shadow h-100">
-                    <img src="/images/games/game1.png" class="card-img-top" alt="Wall Warriors">
-                    <div class="card-body">
-                        <h5 class="card-title">Wall Warriors</h5>
-                        <p class="card-text text-muted"> A endless runner developed in 2021 using Unity and C#.</p>
-                        <a href="#" class="btn btn-outline-primary">View Details</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Game 2 -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
-                <div class="card bg-surface text-light shadow h-100">
-                    <img src="/images/games/game2.png" class="card-img-top" alt="Gem Drop">
-                    <div class="card-body">
-                        <h5 class="card-title">GemDrop</h5>
-                        <p class="card-text text-muted"> A game developed in 2022 using Unity and C#.</p>
-                        <a href="#" class="btn btn-outline-primary">View Details</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Game 3 -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
-                <div class="card bg-surface text-light shadow h-100">
-                    <img src="/images/games/game3.png" class="card-img-top" alt="Game3">
-                    <div class="card-body">
-                        <h5 class="card-title">Hex battle NAME TBD</h5>
-                        <p class="card-text text-muted"> A real-time strategy game developed using Unity and C#, featuring pathfinding.</p>
-                        <a href="#" class="btn btn-outline-primary">View Details</a>
-                    </div>
+    <div class="row g-4">
+        <!-- Game 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
+            <div class="card bg-surface text-light shadow h-100">
+                <img src="/images/games/game1.png" class="card-img-top" alt="Wall Warriors">
+                <div class="card-body">
+                    <h5 class="card-title">Wall Warriors</h5>
+                    <p class="card-text text-muted"> A endless runner developed in 2021 using Unity and C#.</p>
+                    <a href="#" class="btn btn-outline-primary">View Details</a>
                 </div>
             </div>
         </div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-</body>
-
-</html>
+        <!-- Game 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
+            <div class="card bg-surface text-light shadow h-100">
+                <img src="/images/games/game2.png" class="card-img-top" alt="Gem Drop">
+                <div class="card-body">
+                    <h5 class="card-title">GemDrop</h5>
+                    <p class="card-text text-muted"> A game developed in 2022 using Unity and C#.</p>
+                    <a href="#" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <!-- Game 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
+            <div class="card bg-surface text-light shadow h-100">
+                <img src="/images/games/game3.png" class="card-img-top" alt="Game3">
+                <div class="card-body">
+                    <h5 class="card-title">Hex battle NAME TBD</h5>
+                    <p class="card-text text-muted"> A real-time strategy game developed using Unity and C#, featuring
+                        pathfinding.</p>
+                    <a href="#" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{%endblock%}
